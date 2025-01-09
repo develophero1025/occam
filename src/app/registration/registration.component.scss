@@ -1,0 +1,202 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.brand-logo {
+  width: 100%;
+  max-height: 20%;
+}
+
+.registration-form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+
+  h2 {
+    color: #ee4036;
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.26px;
+    text-align: left;
+    margin: 16px;
+  }
+
+  .event-select {
+    padding: 16px;
+    box-shadow: 0px 4px 20px 0px #4040411f;
+    background-color: white;
+    border-radius: 8px;
+    margin: 0 16px;
+
+    .select-title {
+      font-family: "Montserrat";
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+      text-decoration-skip-ink: none;
+      color: #6e6b7b;
+      margin-bottom: 10px;
+    }
+
+    .select-wrapper {
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      text-decoration-skip-ink: none;
+      color: #6e6b7b;
+      align-items: center;
+      display: flex;
+      padding: 4px;
+
+      label {
+        padding-top: 2px;
+        margin-left: 8px;
+      }
+    }
+
+    input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #6e6b7b;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    input[type="radio"]:before {
+      content: "";
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: background 0.3s;
+    }
+
+    input[type="radio"]:checked:before {
+      background: #ee4036; /* Change this color to your desired selected color */
+    }
+
+    input[type="radio"]:hover {
+      border-color: #ee4036; /* Change this color to your desired hover color */
+    }
+
+    .company-title {
+      font-family: "Montserrat";
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+      text-decoration-skip-ink: none;
+      color: #6e6b7b;
+      margin: 8px 0 0;
+    }
+
+    .company-description {
+      font-family: "Montserrat";
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 16.5px;
+      text-align: left;
+      text-decoration-skip-ink: none;
+      color: #6e6b7b;
+    }
+
+    select {
+      border: 1px solid #d8d6de;
+      border-radius: 6px;
+      padding: 11px 10px;
+      width: 100%;
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      text-decoration-skip-ink: none;
+      color: #6e6b7b;
+
+      option {
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        text-decoration-skip-ink: none;
+        color: #6e6b7b;
+        height: 40px;
+        padding: 8px 16px;
+        background-color: white;
+
+        &:checked {
+          background-color: #ee4036; /* Change this color to your desired selected color */
+          color: white;
+        }
+      }
+    }
+  }
+
+  .divider {
+    border-top: 1px solid #d8d6de;
+    margin: 15px 0;
+  }
+
+  .all-field-title {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+    color: #6e6b7b;
+    margin: 16px 16px 8px;
+  }
+
+  .add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    cursor: pointer;
+    border: none;
+
+    p {
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: left;
+      text-decoration-skip-ink: none;
+      color: #ee4036;
+      margin: 0 5px;
+    }
+  }
+
+  .submit-btn {
+    border: none;
+    margin: 5px 16px 50px;
+    border-radius: 8px;
+    color: white;
+    background: #ee4036;
+    padding: 12px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-skip-ink: none;
+  }
+}

@@ -1,0 +1,58 @@
+<div class="container">
+  <img src="assets/images/banner.svg" alt="Brand Image" class="brand-logo" />
+  <form class="registration-form">
+    <h2>Onsite Exhibitors Registration</h2>
+    <div class="event-select">
+      <label for="event" class="select-title">Event Selection</label>
+      <div class="select-wrapper">
+        <input
+          type="radio"
+          id="option1"
+          name="options"
+          value="option1"
+          required
+        />
+        <label for="option1">FHA-Food & Beverage</label>
+      </div>
+      <div class="select-wrapper">
+        <input
+          type="radio"
+          id="option2"
+          name="options"
+          value="option2"
+          required
+        />
+        <label for="option2">Prowine Singapore</label>
+      </div>
+      <h4 class="company-title">Company</h4>
+      <p class="company-description">
+        If you are unable to find your company name, please approach our
+        Exhibitor Team for assistance.
+      </p>
+      <select name="company" id="company-select" required>
+        <option value="" disabled selected>Please select</option>
+        <option value="company0">McDonalds</option>
+        <option value="company1">KFC</option>
+        <option value="company2">Nestlé</option>
+        <option value="company3">Yeo’s</option>
+        <option value="company4">Pizza Hut</option>
+      </select>
+    </div>
+
+    <div class="divider"></div>
+
+    <h4 class="all-field-title">* All fields are mandatory.</h4>
+    <div *ngFor="let exhibitor of exhibitors; let i = index">
+      <app-exhibitor [index]="i"></app-exhibitor>
+    </div>
+
+    <button class="add-btn" (click)="addExhibitor()">
+      <img src="assets/images/add-btn.svg" alt="Add Icon" />
+      <p>Add Exhibitor</p>
+    </button>
+
+    <div class="divider"></div>
+
+    <button type="submit" class="submit-btn">Register</button>
+  </form>
+</div>

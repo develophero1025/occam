@@ -1,0 +1,67 @@
+.all-field-container {
+  margin: 0 16px;
+  border-radius: 8px;
+  background-color: white;
+
+  .field-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fde8e7;
+    padding: 0 16px;
+    border-radius: 8px 8px 0 0;
+
+    .field-title {
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      text-align: left;
+      text-decoration-skip-ink: none;
+      color: #6e6b7b;
+    }
+
+    .remove-btn {
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: right;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      color: #ee4036;
+    }
+  }
+
+  .field-container {
+    padding: 0 16px 20px;
+    border-radius: 0 0 8px;
+    box-shadow: 0px 4px 20px 0px #4040411f;
+    margin-bottom: 20px;
+
+    .field-wrapper {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-family: "Montserrat";
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #6e6b7b;
+        display: block;
+      }
+
+      input {
+        padding: 11px 10px;
+        border-radius: 6px;
+        border: 1px solid #d8d6de;
+      }
+    }
+  }
+}
