@@ -1,7 +1,9 @@
+@import "../../styles.scss";
+
 .all-field-container {
   margin: 0 16px;
   border-radius: 8px;
-  background-color: white;
+  background-color: $white-color;
 
   .field-title-container {
     display: flex;
@@ -18,7 +20,7 @@
       line-height: 24px;
       text-align: left;
       text-decoration-skip-ink: none;
-      color: #6e6b7b;
+      color: $dark-grey-color;
     }
 
     .remove-btn {
@@ -30,7 +32,7 @@
       text-decoration-line: underline;
       text-decoration-style: solid;
       text-decoration-skip-ink: none;
-      color: #ee4036;
+      color: $main-red-color;
       border: none;
     }
   }
@@ -55,61 +57,29 @@
         text-align: left;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
-        color: #6e6b7b;
+        color: $dark-grey-color;
         display: block;
       }
 
       input {
         padding: 11px 10px;
         border-radius: 6px;
-        border: 1px solid #d8d6de;
-      }
-
-      #country-select {
-        border: 1px solid #d8d6de;
-        border-radius: 6px;
-        padding: 11px 10px;
-        width: 100%;
+        border: 1px solid $light-grey-color;
         font-family: "Montserrat";
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
         text-align: left;
+        text-underline-position: from-font;
         text-decoration-skip-ink: none;
-        color: #6e6b7b;
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-
-        option {
-          font-family: "Montserrat";
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 24px;
-          text-align: left;
-          text-decoration-skip-ink: none;
-          color: #6e6b7b;
-          height: 40px;
-          padding: 8px 16px;
-          background-color: white;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          width: 100%;
-
-          &:checked {
-            background-color: #ee4036; /* Change this color to your desired selected color */
-            color: white;
-          }
-        }
+        color: $dark-grey-color;
       }
     }
   }
 }
 
 .error-message {
-  color: #ff0404;
+  color: $error-red-color;
   font-family: "Montserrat";
   font-size: 15px;
   font-weight: 400;
@@ -127,6 +97,6 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #ff3b30;
+  color: $error-red-color-light;
   padding-top: 16px;
 }

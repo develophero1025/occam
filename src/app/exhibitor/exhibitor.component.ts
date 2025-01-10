@@ -2,11 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../services/data.service';
+import { CustomSelectComponent } from '../custom-select/custom-select.component';
 
 @Component({
   selector: 'app-exhibitor',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, CustomSelectComponent],
   templateUrl: './exhibitor.component.html',
   styleUrls: ['./exhibitor.component.scss'],
 })
@@ -17,9 +18,13 @@ export class ExhibitorComponent implements OnInit {
   @Input() error: string = '';
   @Input() removeExhibitor!: (index: number) => void;
 
-  countries: any;
+  countries: any[] = [];
 
   constructor(private dataService: DataService) {}
+
+  getCountryNames(): string[] {
+    return this.countries.map((country: { country: any }) => country.country);
+  }
 
   ngOnInit(): void {
     this.dataService.getCountries().subscribe((data) => {

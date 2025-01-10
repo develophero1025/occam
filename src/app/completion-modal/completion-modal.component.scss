@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -11,7 +13,7 @@
 }
 
 .modal-content {
-  background: white;
+  background: $white-color;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
@@ -24,7 +26,7 @@
     line-height: 21.94px;
     text-align: center;
     text-decoration-skip-ink: none;
-    color: #6e6b7b;
+    color: $dark-grey-color;
   }
 
   p {
@@ -35,7 +37,7 @@
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #6e6b7b;
+    color: $dark-grey-color;
   }
 
   h3 {
@@ -47,7 +49,7 @@
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #ee4036;
+    color: $main-red-color;
   }
 
   .save-btn {
@@ -56,7 +58,7 @@
     border: none;
     border-radius: 8px;
     padding: 12px;
-    background: #ee4036;
+    background: $main-red-color;
     font-family: Montserrat;
     font-size: 16px;
     font-weight: 500;
@@ -64,7 +66,7 @@
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: white;
+    color: $white-color;
   }
 
   .close-btn {
@@ -79,7 +81,7 @@
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #ee4036;
+    color: $main-red-color;
     background: transparent;
   }
 }

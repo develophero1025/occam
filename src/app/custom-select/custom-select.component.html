@@ -1,0 +1,14 @@
+<div class="custom-select">
+  <div class="selected" (click)="toggleDropdown()">
+    {{ selectedOption || "Please select" }}
+  </div>
+  <span
+    class="arrow"
+    [ngClass]="{ up: dropdownOpen, down: !dropdownOpen }"
+  ></span>
+  <ul *ngIf="dropdownOpen" class="options">
+    <li *ngFor="let option of options" (click)="selectOption(option)">
+      {{ option }}
+    </li>
+  </ul>
+</div>

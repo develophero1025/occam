@@ -1,0 +1,76 @@
+@import "../../styles.scss";
+
+.custom-select {
+  position: relative;
+  border: 1px solid $light-grey-color;
+  border-radius: 6px;
+  padding: 11px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selected {
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  color: $dark-grey-color;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.arrow {
+  border: solid #61696d;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  margin-left: 10px;
+}
+
+.arrow.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.arrow.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.options {
+  position: absolute;
+  max-height: 230px;
+  overflow-y: scroll;
+  background-color: $white-color;
+  z-index: 1000;
+  bottom: 33px;
+  left: 0;
+  list-style-type: none;
+  padding-left: 10px;
+  border: none;
+  box-shadow: 0px 4px 20px 0px #4040411f;
+  border-radius: 8px;
+}
+
+.options li {
+  padding: 10px;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  color: $dark-grey-color;
+}
+
+.options li:hover {
+  background-color: #f1f1f1;
+}

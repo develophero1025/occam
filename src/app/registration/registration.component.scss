@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -16,7 +18,7 @@
   background-color: #f1f1f1;
 
   h2 {
-    color: #ee4036;
+    color: $main-red-color;
     font-family: "Montserrat";
     font-size: 24px;
     font-weight: 600;
@@ -28,7 +30,7 @@
   .event-select {
     padding: 16px;
     box-shadow: 0px 4px 20px 0px #4040411f;
-    background-color: white;
+    background-color: $white-color;
     border-radius: 8px;
     margin: 0 16px;
 
@@ -39,7 +41,7 @@
       line-height: 18px;
       text-align: left;
       text-decoration-skip-ink: none;
-      color: #6e6b7b;
+      color: $dark-grey-color;
       margin-bottom: 10px;
     }
 
@@ -50,7 +52,7 @@
       line-height: 24px;
       text-align: left;
       text-decoration-skip-ink: none;
-      color: #6e6b7b;
+      color: $dark-grey-color;
       align-items: center;
       display: flex;
       padding: 4px;
@@ -67,7 +69,7 @@
       -moz-appearance: none;
       width: 20px;
       height: 20px;
-      border: 2px solid #6e6b7b;
+      border: 2px solid $dark-grey-color;
       border-radius: 50%;
       outline: none;
       cursor: pointer;
@@ -79,7 +81,7 @@
       width: 17px;
       height: 17px;
       border-radius: 50%;
-      background: #fff;
+      background: $white-color;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -88,11 +90,11 @@
     }
 
     input[type="radio"]:checked:before {
-      background: #ee4036; /* Change this color to your desired selected color */
+      background: $main-red-color; /* Change this color to your desired selected color */
     }
 
     input[type="radio"]:hover {
-      border-color: #ee4036; /* Change this color to your desired hover color */
+      border-color: $main-red-color; /* Change this color to your desired hover color */
     }
 
     .company-title {
@@ -102,7 +104,7 @@
       line-height: 18px;
       text-align: left;
       text-decoration-skip-ink: none;
-      color: #6e6b7b;
+      color: $dark-grey-color;
       margin: 8px 0 0;
     }
 
@@ -113,11 +115,11 @@
       line-height: 16.5px;
       text-align: left;
       text-decoration-skip-ink: none;
-      color: #6e6b7b;
+      color: $dark-grey-color;
     }
 
     select {
-      border: 1px solid #d8d6de;
+      border: 1px solid $light-grey-color;
       border-radius: 6px;
       padding: 11px 10px;
       width: 100%;
@@ -127,7 +129,7 @@
       line-height: 24px;
       text-align: left;
       text-decoration-skip-ink: none;
-      color: #6e6b7b;
+      color: $dark-grey-color;
 
       option {
         font-family: "Montserrat";
@@ -136,21 +138,21 @@
         line-height: 24px;
         text-align: left;
         text-decoration-skip-ink: none;
-        color: #6e6b7b;
+        color: $dark-grey-color;
         height: 40px;
         padding: 8px 16px;
-        background-color: white;
+        background-color: $white-color;
 
         &:checked {
-          background-color: #ee4036; /* Change this color to your desired selected color */
-          color: white;
+          background-color: $main-red-color; /* Change this color to your desired selected color */
+          color: $white-color;
         }
       }
     }
   }
 
   .divider {
-    border-top: 1px solid #d8d6de;
+    border-top: 1px solid $light-grey-color;
     margin: 15px 0;
   }
 
@@ -169,7 +171,7 @@
       line-height: 24px;
       text-align: left;
       text-decoration-skip-ink: none;
-      color: #ee4036;
+      color: $main-red-color;
       margin: 0 5px;
     }
   }
@@ -178,8 +180,8 @@
     border: none;
     margin: 5px 16px 50px;
     border-radius: 8px;
-    color: white;
-    background: #ee4036;
+    color: $white-color;
+    background: $main-red-color;
     padding: 12px;
     font-family: "Montserrat";
     font-size: 16px;
@@ -205,9 +207,9 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 19.5px;
-  text-align: left;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #ff3b30;
+  color: $error-red-color-light;
   padding: 16px;
 }

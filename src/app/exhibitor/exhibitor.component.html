@@ -2,7 +2,9 @@
 <div class="all-field-container">
   <div class="field-title-container">
     <p class="field-title">Exhibitor #{{ index + 1 }}</p>
-    <button class="remove-btn" (click)="removeExhibitor(index)">Remove</button>
+    <button type="button" class="remove-btn" (click)="removeExhibitor(index)">
+      Remove
+    </button>
   </div>
   <div class="field-container">
     <div *ngIf="error1" class="error1-message">* All fields are mandatory.</div>
@@ -31,16 +33,10 @@
     </div>
     <div class="field-wrapper">
       <label for="country">Country</label>
-      <select
-        name="country"
-        id="country-select"
-        [(ngModel)]="exhibitor.country"
-      >
-        <option value="" disabled selected>Please select</option>
-        <option *ngFor="let country of countries" [value]="country.country">
-          {{ country.country }}
-        </option>
-      </select>
+      <app-custom-select
+        [options]="getCountryNames()"
+        [(selectedOption)]="exhibitor.country"
+      ></app-custom-select>
     </div>
     <div class="field-wrapper">
       <label for="company">Company on Badge</label>
