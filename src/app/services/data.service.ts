@@ -7,10 +7,19 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
   private jsonUrl = '/assets/data/provinces.json';
+  private baseUrl = 'https://staging-fha-2024.occamlab.com.sg/api';
 
   constructor(private http: HttpClient) {}
 
   getCountries(): Observable<any> {
     return this.http.get<any>(this.jsonUrl);
+  }
+
+  getExhibitorCompanies(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/exhibitor-company-list`);
+  }
+
+  postExhibitorCompanies(): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/exhibitor-company-list`, {});
   }
 }

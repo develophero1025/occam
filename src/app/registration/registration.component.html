@@ -1,29 +1,47 @@
 <div class="container">
   <img src="assets/images/banner.svg" alt="Brand Image" class="brand-logo" />
-  <form class="registration-form">
+  <form
+    class="registration-form"
+    #registrationForm="ngForm"
+    (ngSubmit)="onSubmit(registrationForm)"
+  >
     <h2>Onsite Exhibitors Registration</h2>
     <div class="event-select">
       <label for="event" class="select-title">Event Selection</label>
       <div class="select-wrapper">
-        <input type="radio" id="option1" name="options" value="option1" />
-        <label for="option1">FHA-Food & Beverage</label>
+        <input
+          type="radio"
+          id="event1"
+          name="event"
+          value="FHA-Food & Beverage"
+          ngModel
+        />
+        <label for="event1">FHA-Food & Beverage</label>
       </div>
       <div class="select-wrapper">
-        <input type="radio" id="option2" name="options" value="option2" />
-        <label for="option2">Prowine Singapore</label>
+        <input
+          type="radio"
+          id="event2"
+          name="event"
+          value="Prowine Singapore"
+          ngModel
+        />
+        <label for="event2">Prowine Singapore</label>
       </div>
       <h4 class="company-title">Company</h4>
       <p class="company-description">
         If you are unable to find your company name, please approach our
         Exhibitor Team for assistance.
       </p>
-      <select name="company" id="company-select">
+      <select name="company" id="company-select" ngModel>
         <option value="" disabled selected>Please select</option>
-        <option value="company0">McDonalds</option>
-        <option value="company1">KFC</option>
-        <option value="company2">Nestlé</option>
-        <option value="company3">Yeo’s</option>
-        <option value="company4">Pizza Hut</option>
+        <option
+          *ngFor="let company of companies"
+          [value]="company.S_event"
+          (change)="onCompanySelect()"
+        >
+          {{ company.S_event }}
+        </option>
       </select>
     </div>
 
