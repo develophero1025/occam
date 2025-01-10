@@ -14,7 +14,9 @@
           id="event1"
           name="event"
           value="FHA-Food & Beverage"
-          ngModel
+          [(ngModel)]="selectedEvent"
+          (change)="onEventChange()"
+          required
         />
         <label for="event1">FHA-Food & Beverage</label>
       </div>
@@ -24,7 +26,9 @@
           id="event2"
           name="event"
           value="Prowine Singapore"
-          ngModel
+          [(ngModel)]="selectedEvent"
+          (change)="onEventChange()"
+          required
         />
         <label for="event2">Prowine Singapore</label>
       </div>
@@ -33,26 +37,33 @@
         If you are unable to find your company name, please approach our
         Exhibitor Team for assistance.
       </p>
-      <select name="company" id="company-select" ngModel>
+      <select
+        name="company"
+        id="company-select"
+        [(ngModel)]="selectedCompany"
+        (change)="onCompanySelect()"
+      >
         <option value="" disabled selected>Please select</option>
         <option
-          *ngFor="let company of companies"
-          [value]="company.S_event"
-          (change)="onCompanySelect()"
+          *ngFor="let company of filteredCompanies"
+          [value]="company.S_company"
         >
-          {{ company.S_event }}
+          {{ company.S_company }}
         </option>
       </select>
     </div>
 
     <div class="divider"></div>
 
-    <h4 class="all-field-title">* All fields are mandatory.</h4>
+    <div *ngIf="formError" class="error-message">{{ formError }}</div>
+
     <div *ngFor="let exhibitor of exhibitors; let i = index">
       <app-exhibitor
         [index]="i"
         [exhibitor]="exhibitor"
         [removeExhibitor]="removeExhibitor.bind(this)"
+        [error]="exhibitor.error"
+        [error1]="exhibitor.error1"
       ></app-exhibitor>
     </div>
 
@@ -63,6 +74,16 @@
 
     <div class="divider"></div>
 
-    <button type="submit" class="submit-btn">Register</button>
+    <div *ngIf="isSubmitting" class="progress-indicator">
+      <i class="fas fa-spinner fa-spin"></i>
+    </div>
+    <button type="submit" class="submit-btn" [disabled]="isSubmitting">
+      Register
+    </button>
   </form>
+  <app-completion-modal
+    *ngIf="showCompletionModal"
+    [fiveCode]="fiveCode"
+    (close)="closeCompletionModal()"
+  ></app-completion-modal>
 </div>

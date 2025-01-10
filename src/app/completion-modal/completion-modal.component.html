@@ -1,0 +1,9 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>Registration Completed</h2>
+    <p>Your Unique Code is</p>
+    <h3>{{ fiveCode }}</h3>
+    <button class="save-btn" (click)="saveImage()">Save as Image</button>
+    <button class="close-btn" (click)="closeModal()">Back to Home</button>
+  </div>
+</div>

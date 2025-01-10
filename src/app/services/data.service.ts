@@ -16,10 +16,10 @@ export class DataService {
   }
 
   getExhibitorCompanies(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/exhibitor-company-list`);
+    return this.http.post<any>(`${this.baseUrl}/exhibitor-company-list`, {});
   }
 
-  postExhibitorCompanies(): Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}/exhibitor-company-list`, {});
+  addExhibitor(payload: any): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/add-exhibitor`, payload);
   }
 }

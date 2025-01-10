@@ -12,8 +12,11 @@ import { DataService } from '../services/data.service';
 })
 export class ExhibitorComponent implements OnInit {
   @Input() index!: number;
-  @Input() removeExhibitor!: (index: number) => void;
   @Input() exhibitor!: any;
+  @Input() error1: string = '';
+  @Input() error: string = '';
+  @Input() removeExhibitor!: (index: number) => void;
+
   countries: any;
 
   constructor(private dataService: DataService) {}
