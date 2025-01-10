@@ -62,6 +62,38 @@
         border-radius: 6px;
         border: 1px solid #d8d6de;
       }
+
+      select {
+        border: 1px solid #d8d6de;
+        border-radius: 6px;
+        padding: 11px 10px;
+        width: 100%;
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        text-decoration-skip-ink: none;
+        color: #6e6b7b;
+
+        option {
+          font-family: "Montserrat";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: left;
+          text-decoration-skip-ink: none;
+          color: #6e6b7b;
+          height: 40px;
+          padding: 8px 16px;
+          background-color: white;
+
+          &:checked {
+            background-color: #ee4036; /* Change this color to your desired selected color */
+            color: white;
+          }
+        }
+      }
     }
   }
 }

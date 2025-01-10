@@ -9,7 +9,7 @@ import { ExhibitorComponent } from '../exhibitor/exhibitor.component';
   styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent {
-  exhibitors: number[] = [];
+  exhibitors: number[] = [1];
 
   addExhibitor() {
     this.exhibitors.push(this.exhibitors.length + 1);
