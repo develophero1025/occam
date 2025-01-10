@@ -1,17 +1,27 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { ExhibitorComponent } from '../exhibitor/exhibitor.component';
 
 @Component({
   selector: 'app-registration',
-  imports: [CommonModule, ExhibitorComponent],
+  imports: [CommonModule, ExhibitorComponent, FormsModule],
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent {
-  exhibitors: number[] = [1];
+  exhibitors: any[] = [];
 
-  addExhibitor() {
-    this.exhibitors.push(this.exhibitors.length + 1);
+  constructor() {
+    this.exhibitors.push({});
+  }
+
+  addExhibitor(): void {
+    this.exhibitors.push({});
+    console.log(this.exhibitors);
+  }
+
+  removeExhibitor(index: number): void {
+    this.exhibitors.splice(index, 1);
   }
 }

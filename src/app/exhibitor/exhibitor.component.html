@@ -2,24 +2,38 @@
 <div class="all-field-container">
   <div class="field-title-container">
     <p class="field-title">Exhibitor #{{ index + 1 }}</p>
-    <p class="remove-btn">Remove</p>
+    <button class="remove-btn" (click)="removeExhibitor(index)">Remove</button>
   </div>
   <div class="field-container">
     <div class="field-wrapper">
       <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="exhibitor.email"
+      />
     </div>
     <div class="field-wrapper">
       <label for="name">Name on Badge</label>
-      <input type="text" id="name" name="name" required />
+      <input type="text" id="name" name="name" [(ngModel)]="exhibitor.name" />
     </div>
     <div class="field-wrapper">
       <label for="jobtitle">Job Title</label>
-      <input type="text" id="jobtitle" name="jobtitle" required />
+      <input
+        type="text"
+        id="jobtitle"
+        name="jobtitle"
+        [(ngModel)]="exhibitor.jobTitle"
+      />
     </div>
     <div class="field-wrapper">
       <label for="country">Country</label>
-      <select name="country" id="country-select" required>
+      <select
+        name="country"
+        id="country-select"
+        [(ngModel)]="exhibitor.country"
+      >
         <option value="" disabled selected>Please select</option>
         <option *ngFor="let country of countries" [value]="country.country">
           {{ country.country }}
@@ -28,7 +42,12 @@
     </div>
     <div class="field-wrapper">
       <label for="company">Company on Badge</label>
-      <input type="text" id="company" name="company" required />
+      <input
+        type="text"
+        id="company"
+        name="company"
+        [(ngModel)]="exhibitor.company"
+      />
     </div>
   </div>
 </div>

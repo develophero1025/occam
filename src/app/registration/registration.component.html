@@ -5,23 +5,11 @@
     <div class="event-select">
       <label for="event" class="select-title">Event Selection</label>
       <div class="select-wrapper">
-        <input
-          type="radio"
-          id="option1"
-          name="options"
-          value="option1"
-          required
-        />
+        <input type="radio" id="option1" name="options" value="option1" />
         <label for="option1">FHA-Food & Beverage</label>
       </div>
       <div class="select-wrapper">
-        <input
-          type="radio"
-          id="option2"
-          name="options"
-          value="option2"
-          required
-        />
+        <input type="radio" id="option2" name="options" value="option2" />
         <label for="option2">Prowine Singapore</label>
       </div>
       <h4 class="company-title">Company</h4>
@@ -29,7 +17,7 @@
         If you are unable to find your company name, please approach our
         Exhibitor Team for assistance.
       </p>
-      <select name="company" id="company-select" required>
+      <select name="company" id="company-select">
         <option value="" disabled selected>Please select</option>
         <option value="company0">McDonalds</option>
         <option value="company1">KFC</option>
@@ -43,7 +31,11 @@
 
     <h4 class="all-field-title">* All fields are mandatory.</h4>
     <div *ngFor="let exhibitor of exhibitors; let i = index">
-      <app-exhibitor [index]="i"></app-exhibitor>
+      <app-exhibitor
+        [index]="i"
+        [exhibitor]="exhibitor"
+        [removeExhibitor]="removeExhibitor.bind(this)"
+      ></app-exhibitor>
     </div>
 
     <button class="add-btn" (click)="addExhibitor()">

@@ -1,16 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-exhibitor',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './exhibitor.component.html',
   styleUrls: ['./exhibitor.component.scss'],
 })
 export class ExhibitorComponent implements OnInit {
   @Input() index!: number;
+  @Input() removeExhibitor!: (index: number) => void;
+  @Input() exhibitor!: any;
   countries: any;
 
   constructor(private dataService: DataService) {}
