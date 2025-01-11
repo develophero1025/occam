@@ -128,6 +128,7 @@ export class RegistrationComponent implements OnInit {
         this.showCompletionModal = true;
       })
       .catch((error) => {
+        this.formError = error.error.message;
         this.isSubmitting = false;
       });
   }
